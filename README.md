@@ -1,29 +1,67 @@
-# Custom functions in Excel
+# Cantonese for Excel
 
-Custom functions enable you to add new functions to Excel by defining those functions in JavaScript as part of an add-in. Users within Excel can access custom functions just as they would any native function in Excel, such as `SUM()`.  
+This Excel Add-in provides formulas to facilitate working with Cantonese romanization in Excel.
 
-This repository contains the source code used by the [Yo Office generator](https://github.com/OfficeDev/generator-office) when you create a new custom functions project. You can also use this repository as a sample to base your own custom functions project from if you choose not to use the generator. For more detailed information about custom functions in Excel, see the [Custom functions overview](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-overview) article in the Office Add-ins documentation or see the [additional resources](#additional-resources) section of this repository.
+These formulas do their best to convert the parts that they understand and leave things alone that they do not understand. This should allow you to intersperse English or 中文字 with your romanization and have them pass through correctly.
 
-## Debugging custom functions
+## Formulas
 
-This template supports debugging custom functions from [Visual Studio Code](https://code.visualstudio.com/). For more information see [Custom functions debugging](https://aka.ms/custom-functions-debug). For general information on debugging task panes and other Office Add-in parts, see [Test and debug Office Add-ins](https://docs.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins).
+### Quick Reference
 
-## Questions and comments
+| Formula | Arguments | Description |
+|---|---|---|
+| [CANTONESE.JYUTPINGTOYALE](#CANTONESEJYUTPINGTOYALE) | string | Convert Jyutping to Yale |
 
-We'd love to get your feedback about this sample. You can send your feedback to us in the *Issues* section of this repository.
+### `CANTONESE.JYUTPINGTOYALE`
 
-Questions about Microsoft Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API).  If your question is about the Office JavaScript APIs, make sure it's tagged with  [office-js].
+#### Usage Examples
 
-## Additional resources
+| Cell Contents | Details |
+|---|---|
+| `=CANTONESE.JYUTPINGTOYALE("jyut6ping3")` | You may pass a string directly into this formula. |
+| `=CANTONESE.JYUTPINGTOYALE(A1)` | You may pass a cell reference into this formula. |
 
-* [Custom functions overview](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-overview)
-* [Custom functions best practices](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-best-practices)
-* [Custom functions runtime](https://docs.microsoft.com/office/dev/add-ins/excel/custom-functions-runtime)
-* [Office add-in documentation](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
-* More Office Add-in samples at [OfficeDev on Github](https://github.com/officedev)
+#### Input
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+- The input string for this function may contain any amount of text.
+- The input string does not have to be exclusively Jyutping and may contain English, 中文字, punctuation, and more.
+- Your Jyutping elements may be adjacent or space separated.
+- The input string may contain capitalization.
 
-## Copyright
+#### Output
 
-Copyright (c) 2017 Microsoft Corporation. All rights reserved.
+- The output string is best effort. It will only transform things that it can confidently identify as Jyutping.
+- Capitalization patterns are preserved, whether lower case, initial caps, or all caps.
+
+***
+
+## Add-in End-User License Agreement
+
+[The Cantonese for Excel Add-in is offered under the End-User License Agreement specified here.](.legal/EULA.pdf)
+
+## Add-in Privacy Policy
+
+The Cantonese for Excel Add-in does not collect or make use of any user information or data.
+
+The Cantonese for Excel Add-in loads assets from Content Delivery Networks provided by Microsoft and GitHub's GitHub Pages product. Each of these providers may receive your IP address when those requests are made.
+
+## Build & Release Excel for Cantonese
+
+```sh
+git checkout master
+git clean -fdx
+npm ci
+npm version patch
+npm run build
+git branch -D gh-pages
+git checkout --orphan gh-pages
+git rm -r --cached ./
+git add -f dist
+git commit -m "Release"
+git push -f --set-upstream origin gh-pages
+git checkout -f master
+```
+
+## Code License
+
+The code in this repository is not licensed for reuse.

@@ -1,9 +1,9 @@
 {
-  "name": "excel-custom-functions",
-  "version": "2.0.0",
+  "name": "cantonese-for-excel",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OfficeDev/Excel-Custom-Functions.git"
+    "url": "https://github.com/cantonese/cantonese-for-excel.git"
   },
   "license": "UNLICENSED",
   "config": {
@@ -15,10 +15,10 @@
   "scripts": {
     "build": "webpack -p --mode production --https false",
     "build:dev": "webpack --mode development --https false",
-    "build-dev": "webpack --mode development --https false && echo . && echo . && echo . && echo Please use 'build:dev' instead of 'build-dev'.",
     "dev-server": "webpack-dev-server --mode development",
     "lint": "office-addin-lint check",
     "lint:fix": "office-addin-lint fix",
+    "logos": "/Applications/Sketch.app/Contents/MacOS/sketchtool export slices logos.sketch --output=assets",
     "prettier": "office-addin-lint prettier",
     "start": "office-addin-debugging start manifest.xml",
     "start:desktop": "office-addin-debugging start manifest.xml desktop",

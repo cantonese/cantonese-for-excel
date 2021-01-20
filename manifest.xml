@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>a297bde7-ad4f-4954-9fc5-fed77888ac76</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <Id>d67f6134-0fdc-48f7-97d5-30566913c6ef</Id>
+  <Version>0.0.0</Version>
+  <ProviderName>Nathan Hammond</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="cantonese-for-excel"/>
-  <Description DefaultValue="Write your own Excel functions in TypeScript."/>
+  <DisplayName DefaultValue="Cantonese for Excel"/>
+  <Description DefaultValue="Cantonese Tools for Excel"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://github.com/cantonese/cantonese-for-excel/issues"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://cantonese.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -89,19 +89,19 @@
         <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:3000/functions.js"/>
         <bt:Url id="Functions.Metadata.Url" DefaultValue="https://localhost:3000/functions.json"/>
         <bt:Url id="Functions.Page.Url" DefaultValue="https://localhost:3000/functions.html"/>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/cantonese/cantonese-for-excel"/>
         <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="Functions.Namespace" DefaultValue="CONTOSO"/>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
+        <bt:String id="Functions.Namespace" DefaultValue="CANTONESE"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Cantonese Tools Loaded!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Cantonese"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Cantonese"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Cantonese for Excel loaded successfully. You can now use romanization conversion formulas."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show Cantonese for Excel Taskpane"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

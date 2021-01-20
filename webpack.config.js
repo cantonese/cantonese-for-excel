@@ -1,12 +1,13 @@
+/* eslint-env node */
 const devCerts = require("office-addin-dev-certs");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CustomFunctionsMetadataPlugin = require("custom-functions-metadata-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
+const version = require('./package').version;
 
 const urlDev="https://localhost:3000/";
-const urlProd="https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd="https://cantonese.github.io/cantonese-for-excel/dist/";
 
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
@@ -43,7 +44,7 @@ module.exports = async (env, options) => {
           test: /\.(png|jpg|jpeg|gif)$/,
           loader: "file-loader",
           options: {
-            name: '[path][name].[ext]',          
+            name: '[path][name].[ext]',
           }
         }
       ]
@@ -75,10 +76,11 @@ module.exports = async (env, options) => {
           to: "[name]." + buildType + ".[ext]",
           from: "manifest*.xml",
           transform(content) {
+            content = content.toString().replace("<Version>0.0.0</Version>", `<Version>${version}</Version>`)
             if (dev) {
               return content;
             } else {
-              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+              return content.replace(new RegExp(urlDev, "g"), urlProd);
             }
           }
         }
@@ -92,7 +94,7 @@ module.exports = async (env, options) => {
     devServer: {
       headers: {
         "Access-Control-Allow-Origin": "*"
-      },      
+      },
       https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
       port: process.env.npm_package_config_dev_server_port || 3000
     }
