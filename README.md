@@ -62,6 +62,18 @@ git push -f --set-upstream origin gh-pages
 git checkout -f master
 ```
 
+## Submission Details for Microsoft Partner Center
+
+```md
+This Excel Add-in enables transformation between different types of Cantonese romanizations. No testing accounts are required.
+
+Testing:
+=CANTONESE.JYUTPINGTOYALE("nei5hou2")
+
+Expected Output:
+"néihhóu"
+```
+
 ## Code License
 
 The code in this repository is not licensed for reuse.
