@@ -60,6 +60,7 @@ git add -f dist
 git commit -m "Release"
 git push -f --set-upstream origin gh-pages
 git checkout -f master
+git push origin master
 ```
 
 ## Submission Details for Microsoft Partner Center
