@@ -76,7 +76,7 @@ module.exports = async (env, options) => {
           to: "[name]." + buildType + ".[ext]",
           from: "manifest*.xml",
           transform(content) {
-            content = content.toString().replace("<Version>0.0.0</Version>", `<Version>${version}</Version>`)
+            content = content.toString().replace("<Version>0.0.0</Version>", `<Version>${version}.0</Version>`)
             if (dev) {
               return content;
             } else {
