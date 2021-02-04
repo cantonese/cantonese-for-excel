@@ -45,6 +45,15 @@ The Cantonese for Excel Add-in does not collect or make use of any user informat
 
 The Cantonese for Excel Add-in loads assets from Content Delivery Networks provided by Microsoft and GitHub's GitHub Pages product. Each of these providers may receive your IP address when those requests are made.
 
+## Testing Locally
+
+```sh
+npm run stop
+rm -rf dist
+npm run build
+npm run start
+```
+
 ## Build & Release Excel for Cantonese
 
 ```sh
