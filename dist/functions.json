@@ -1,0 +1,20 @@
+{
+    "functions": [
+        {
+            "description": "Convert Jyutping to Yale",
+            "helpUrl": "https://github.com/cantonese/cantonese-for-excel#cantonesejyutpingtoyale",
+            "id": "JYUTPINGTOYALE",
+            "name": "JYUTPINGTOYALE",
+            "parameters": [
+                {
+                    "description": "String containing Jyutping romanization.",
+                    "name": "jyutping",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        }
+    ]
+}

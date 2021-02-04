@@ -1,0 +1,39 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-welcome__header {
+  padding: 20px;
+  padding-bottom: 30px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.ms-welcome__header img {
+  display: block;
+  margin: 0 auto;
+}
+
+.ms-welcome__main {
+  padding: 10px 20px;
+}
+
+table {
+  margin: 1em 0;
+  border-spacing: 0;
+  border: none;
+  width: 100%;
+}
+
+table thead th {
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+table tr > * + *{
+  padding-left: 10px;
+}
