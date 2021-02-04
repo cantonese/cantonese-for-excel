@@ -1,4 +1,19 @@
-﻿const JYUTPING_INITIAL_TO_YALE_INITIAL = {
+﻿var normalizedLookup = { 'à': 'à', 'á': 'á', 'ā': 'ā', 'è': 'è', 'é': 'é', 'ē': 'ē', 'ì': 'ì', 'í': 'í', 'ī': 'ī', 'ò': 'ò', 'ó': 'ó', 'ō': 'ō', 'ù': 'ù', 'ú': 'ú', 'ū': 'ū', 'm̀': 'm̀', 'ḿ': 'ḿ', 'm̄': 'm̄', 'g̀': 'g̀', 'ǵ': 'ǵ', 'ḡ': 'ḡ' }
+var nonNormalizedRegex = /(?:à|á|ā|è|é|ē|ì|í|ī|ò|ó|ō|ù|ú|ū|m̀|ḿ|m̄|g̀|ǵ|ḡ)/gu;
+
+function normalizeReplacer(nonNormalized) {
+  return normalizedLookup[nonNormalized];
+}
+
+function normalize(string) {
+  if (typeof String.prototype.normalize === 'function') {
+    return string.normalize();
+  } else {
+    return string.replace(nonNormalizedRegex, normalizeReplacer);
+  }
+}
+
+const JYUTPING_INITIAL_TO_YALE_INITIAL = {
   "": "",
   "b": "b",
   "p": "p",
@@ -217,5 +232,5 @@ export function jyutpingToYale(jyutping) {
 
   output += jyutping.slice(wordLastIndex);
 
-  return output.normalize();
+  return normalize(output);
 }
