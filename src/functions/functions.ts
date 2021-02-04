@@ -1,5 +1,5 @@
-﻿var normalizedLookup = { 'à': 'à', 'á': 'á', 'ā': 'ā', 'è': 'è', 'é': 'é', 'ē': 'ē', 'ì': 'ì', 'í': 'í', 'ī': 'ī', 'ò': 'ò', 'ó': 'ó', 'ō': 'ō', 'ù': 'ù', 'ú': 'ú', 'ū': 'ū', 'm̀': 'm̀', 'ḿ': 'ḿ', 'm̄': 'm̄', 'g̀': 'g̀', 'ǵ': 'ǵ', 'ḡ': 'ḡ' }
-var nonNormalizedRegex = /(?:à|á|ā|è|é|ē|ì|í|ī|ò|ó|ō|ù|ú|ū|m̀|ḿ|m̄|g̀|ǵ|ḡ)/gu;
+var normalizedLookup = { 'à': 'à', 'á': 'á', 'ā': 'ā', 'è': 'è', 'é': 'é', 'ē': 'ē', 'ì': 'ì', 'í': 'í', 'ī': 'ī', 'ò': 'ò', 'ó': 'ó', 'ō': 'ō', 'ù': 'ù', 'ú': 'ú', 'ū': 'ū', 'm̀': 'm̀', 'ḿ': 'ḿ', 'm̄': 'm̄', 'g̀': 'g̀', 'ǵ': 'ǵ', 'ḡ': 'ḡ' }
+var nonNormalizedRegex = /(?:à|á|ā|è|é|ē|ì|í|ī|ò|ó|ō|ù|ú|ū|m̀|ḿ|m̄|g̀|ǵ|ḡ)/g;
 
 function normalizeReplacer(nonNormalized) {
   return normalizedLookup[nonNormalized];
