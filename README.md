@@ -4,6 +4,27 @@ This Excel Add-in provides formulas to facilitate working with Cantonese romaniz
 
 These formulas do their best to convert the parts that they understand and leave things alone that they do not understand. This should allow you to intersperse English or 中文字 with your romanization and have them pass through correctly.
 
+## Table of Contents
+
+- [Installation](#installation)
+  * [Large Screen](#large-screen)
+  * [Small Screen](#small-screen)
+  * [Office Add-ins Pop-up Window](#office-add-ins-pop-up-window)
+- [Formulas](#formulas)
+  * [Quick Reference](#quick-reference)
+  * [`CANTONESE.JYUTPINGTOYALE`](#-cantonesejyutpingtoyale-)
+    + [Usage Examples](#usage-examples)
+    + [Input](#input)
+    + [Output](#output)
+- [Legal](#legal)
+  * [Add-in End-User License Agreement](#add-in-end-user-license-agreement)
+  * [Add-in Privacy Policy](#add-in-privacy-policy)
+  * [Code License](#code-license)
+- [Development](#development)
+  * [Testing Locally](#testing-locally)
+  * [Build & Release Excel for Cantonese](#build---release-excel-for-cantonese)
+  * [Submission Details for Microsoft Partner Center](#submission-details-for-microsoft-partner-center)
+
 ## Installation
 
 [You can install Cantonese for Excel directly from the Microsoft 365 Add-in Store.](https://appsource.microsoft.com/en-us/product/office/WA200002575) You can also install it from within Excel. The interface is slightly different between large and small screens.
@@ -66,17 +87,25 @@ These formulas do their best to convert the parts that they understand and leave
 
 ***
 
-## Add-in End-User License Agreement
+## Legal
+
+### Add-in End-User License Agreement
 
 [The Cantonese for Excel Add-in is offered under the End-User License Agreement specified here.](.legal/EULA.pdf)
 
-## Add-in Privacy Policy
+### Add-in Privacy Policy
 
 The Cantonese for Excel Add-in does not collect or make use of any user information or data.
 
 The Cantonese for Excel Add-in loads assets from Content Delivery Networks provided by Microsoft and GitHub's GitHub Pages product. Each of these providers may receive your IP address when those requests are made.
 
-## Testing Locally
+### Code License
+
+The code in this repository is not licensed for reuse.
+
+## Development
+
+### Testing Locally
 
 ```sh
 npm run stop
@@ -85,7 +114,7 @@ npm run build
 npm run start
 ```
 
-## Build & Release Excel for Cantonese
+### Build & Release Excel for Cantonese
 
 ```sh
 git checkout master
@@ -103,7 +132,7 @@ git checkout -f master
 git push origin master
 ```
 
-## Submission Details for Microsoft Partner Center
+### Submission Details for Microsoft Partner Center
 
 ```md
 This Excel Add-in enables transformation between different types of Cantonese romanizations. No testing accounts are required.
@@ -114,7 +143,3 @@ Testing:
 Expected Output:
 "néihhóu"
 ```
-
-## Code License
-
-The code in this repository is not licensed for reuse.
