@@ -19,6 +19,7 @@ These formulas do their best to convert the parts that they understand and leave
 - [Legal](#legal)
   * [Add-in End-User License Agreement](#add-in-end-user-license-agreement)
   * [Add-in Privacy Policy](#add-in-privacy-policy)
+  * [Copyright Notices](#copyright-notices)
   * [Code License](#code-license)
 - [Development](#development)
   * [Testing Locally](#testing-locally)
@@ -98,6 +99,10 @@ These formulas do their best to convert the parts that they understand and leave
 The Cantonese for Excel Add-in does not collect or make use of any user information or data.
 
 The Cantonese for Excel Add-in loads assets from Content Delivery Networks provided by Microsoft and GitHub's GitHub Pages product. Each of these providers may receive your IP address when those requests are made.
+
+### Copyright Notices
+
+Portions Copyright Microsoft Corporation. See the license in [.legal/Excel Custom Functions](.legal/Excel%20Custom%20Functions). (Specifically, anything `blame`d to [#e2f2839](https://github.com/cantonese/cantonese-for-excel/commit/e2f283932f5ac201e5e508ed508bd8e267fe760a).)
 
 ### Code License
 
