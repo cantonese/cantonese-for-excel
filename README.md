@@ -4,6 +4,37 @@ This Excel Add-in provides formulas to facilitate working with Cantonese romaniz
 
 These formulas do their best to convert the parts that they understand and leave things alone that they do not understand. This should allow you to intersperse English or 中文字 with your romanization and have them pass through correctly.
 
+## Installation
+
+[You can install Cantonese for Excel directly from the Microsoft 365 Add-in Store.](https://appsource.microsoft.com/en-us/product/office/WA200002575) You can also install it from within Excel. The interface is slightly different between large and small screens.
+
+### Large Screen
+
+1. First, select the **Insert** tab on the Ribbon.
+2. Select **Get Add-ins**.
+
+<img width="640" height="320" style="display: block; object-fit: contain; object-position: 0 0;" alt="" src="docs/readme/Large Screen.png" />
+
+### Small Screen
+
+1. First, select the **Insert** tab on the Ribbon.
+2. Select **Add-ins**.
+3. In the drop-down that appears, select **Get Add-ins**
+
+<img width="640" height="320" style="display: block; object-fit: contain; object-position: 0 0;" alt="" src="docs/readme/Small Screen.png" />
+
+### Office Add-ins Pop-up Window
+
+1. In the **Office Add-ins** pop-up window that appears, select **STORE**.
+2. In the search field of the pop-up window, type "Cantonese"
+3. Press the search button.
+4. Press the **Add** button.
+5. Press the **Continue** button in the confirmation screen.
+6. Congratulations! Cantonese for Excel is now installed!
+
+<img width="760" height="475" style="display: block; object-fit: contain; object-position: 0 0;" alt="" src="docs/readme/Office Add-ins Pop-up Window.png" />
+<img width="760" height="475" style="display: block; object-fit: contain; object-position: 0 0;" alt="" src="docs/readme/Confirmation.png" />
+
 ## Formulas
 
 ### Quick Reference
